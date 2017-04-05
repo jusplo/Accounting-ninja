@@ -26,24 +26,13 @@ public class FinanceController {
     @RequestMapping(path = "/test", method = {RequestMethod.POST})
     public String save(@RequestBody Cost lineToSave) throws IOException {
     	list.add(lineToSave);
-//        File file = new File("test.txt");
-//        Writer writer = new FileWriter(file, true); 
-//        writer.write(lineToSave+ System.lineSeparator());
-//        writer.flush();
+
         return "saved";
     }
 
     @RequestMapping(path = "/test", method = {RequestMethod.GET})
     public List<Cost> get() throws IOException {
-//        File file = new File("test.txt");
-//        Scanner sc = new Scanner(file);
-//        ObjectMapper mapper = new ObjectMapper();
-//        while(sc.hasNextLine()){
-//            Cost newCost = mapper.readValue(sc.nextLine(),Cost.class);
-//            list.add(newCost);
-//            sc.close();
-//            
-//        }
+
         return list;
     }
 }
